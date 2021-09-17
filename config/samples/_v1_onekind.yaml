@@ -1,0 +1,8 @@
+apiVersion: msaber.dev/v1
+kind: Onekind
+metadata:
+  name: onekind-sample
+spec:
+  # Add fields here
+  replicas: 1
+  message: "hello world"
