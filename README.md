@@ -7,6 +7,12 @@ This is a simple k8s operator written in Go with operator framework. The idea is
 
 ## Deployment
 
+### Prerequisties
+
+* Minikube
+* Go@1.16
+* docker
+
 ### Create Your Image
 
 To deploy the operator from the repo with your own docker image use
@@ -15,7 +21,10 @@ To deploy the operator from the repo with your own docker image use
 ./build-deploy-operator-on-custer.sh example/k8s-operator:1.0
 ```
 
-This script will build and push the image to DockerHub(or whatever you are logged into) then deploy the operator the the current loaded kubeconfig. **P.S. This script login to docker using .docker-secret**
+This script will build and publish image, then deploy the operator in the current loaded kubeconfig. **P.S. This script login to docker using .docker-secret**
+
+Next steps will be in [Testing Section](#testing)
+
 
 ### Use Existing Image
 
