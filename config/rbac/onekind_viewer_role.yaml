@@ -1,0 +1,20 @@
+# permissions for end users to view onekinds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: onekind-viewer-role
+rules:
+- apiGroups:
+  - msaber.dev
+  resources:
+  - onekinds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - msaber.dev
+  resources:
+  - onekinds/status
+  verbs:
+  - get

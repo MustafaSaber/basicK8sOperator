@@ -1,0 +1,24 @@
+# permissions for end users to edit onekinds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: onekind-editor-role
+rules:
+- apiGroups:
+  - msaber.dev
+  resources:
+  - onekinds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - msaber.dev
+  resources:
+  - onekinds/status
+  verbs:
+  - get
